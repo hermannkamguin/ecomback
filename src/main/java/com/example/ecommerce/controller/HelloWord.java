@@ -12,9 +12,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HelloWord {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public ResponseEntity<String> helloWord() throws Exception{
-        String hello = new String("Hello Word");
-        return ResponseEntity.ok(hello);
+    public ResponseEntity<String> helloWord(){
+        System.out.println("je rentre");
+        return ResponseEntity.ok("hello word");
+    }
+
+    @RequestMapping(value = "/sttr", method = RequestMethod.GET)
+    public ResponseEntity<String> sttr(){
+        return ResponseEntity.ok("hello word");
     }
 
 }
